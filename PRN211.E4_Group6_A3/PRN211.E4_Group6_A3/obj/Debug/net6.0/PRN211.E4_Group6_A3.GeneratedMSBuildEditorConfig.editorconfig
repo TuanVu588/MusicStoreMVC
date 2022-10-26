@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Vi Tuan Vu/OneDrive/Documents/GitHub/MusicStoreMVC/PRN211.E4_Group6_A3/PRN211.E4_Group6_A3/Views/Albums/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vi Tuan Vu/OneDrive/Documents/GitHub/MusicStoreMVC/PRN211.E4_Group6_A3/PRN211.E4_Group6_A3/Views/Albums/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vi Tuan Vu/OneDrive/Documents/GitHub/MusicStoreMVC/PRN211.E4_Group6_A3/PRN211.E4_Group6_A3/Views/Albums/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vi Tuan Vu/OneDrive/Documents/GitHub/MusicStoreMVC/PRN211.E4_Group6_A3/PRN211.E4_Group6_A3/Views/Albums/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vi Tuan Vu/OneDrive/Documents/GitHub/MusicStoreMVC/PRN211.E4_Group6_A3/PRN211.E4_Group6_A3/Views/Albums/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Vi Tuan Vu/OneDrive/Documents/GitHub/MusicStoreMVC/PRN211.E4_Group6_A3/PRN211.E4_Group6_A3/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
