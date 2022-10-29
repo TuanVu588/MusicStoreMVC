@@ -11,13 +11,16 @@ namespace PRN211.E4_Group6_A3
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            var conf = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
+            //var conf = new ConfigurationBuilder()
+            //    .AddJsonFile("appsettings.json")
+            //    .Build();
 
-            builder.Services.AddDbContext<MusicStoreContext>(option => option.UseSqlServer(conf.GetConnectionString("DbConnection")));
+            builder.Services.AddDbContext<MusicStoreContext>(/*option => option.UseSqlServer(conf.GetConnectionString("DbConnection"))*/);
+          
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession();
+            builder.Services.AddHttpContextAccessor();
             var app = builder.Build();
-
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
@@ -28,7 +31,8 @@ namespace PRN211.E4_Group6_A3
             app.UseRouting();
 
             app.UseAuthorization();
-
+            //use session
+            app.UseSession();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

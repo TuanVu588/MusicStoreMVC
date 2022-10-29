@@ -12,16 +12,23 @@ namespace PRN211.E4_Group6_A3.Controllers
     public class AlbumsController : Controller
     {
         private readonly MusicStoreContext _context;
-
-        public AlbumsController(MusicStoreContext context)
+        private readonly IWebHostEnvironment _environment;
+        public AlbumsController(MusicStoreContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
         // GET: Albums
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int genreId,string currentTitle)
         {
-            var musicStoreContext = _context.Albums.Include(a => a.Artist).Include(a => a.Genre);
+            List<SelectListItem> genres = new SelectList(_context.Genres,"GenreId","Name",genreId).ToList();
+            genres.Insert(0, new SelectListItem { Value = "0", Text = "All" });
+            ViewData["GenreIds"] = genres;
+            var musicStoreContext = _context.Albums.Include(a => a.Artist).Include(a => a.Genre)
+                .Where(a => a.GenreId == (genreId == 0 ? a.GenreId:genreId)
+                && a.Title.Contains(currentTitle??""));
+            ViewData["CurrentTitle"] = currentTitle;
             return View(await musicStoreContext.ToListAsync());
         }
 
@@ -48,8 +55,8 @@ namespace PRN211.E4_Group6_A3.Controllers
         // GET: Albums/Create
         public IActionResult Create()
         {
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId");
-            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "GenreId");
+            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name");
+            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name");
             return View();
         }
 
@@ -58,17 +65,33 @@ namespace PRN211.E4_Group6_A3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AlbumId,GenreId,ArtistId,Title,Price,AlbumUrl")] Album album)
+        public async Task<IActionResult> Create([Bind("AlbumId,GenreId,ArtistId,Title,Price,AlbumUrl")] Album album,IFormFile file)
         {
-            if (ModelState.IsValid)
+            string dir = Path.Combine(_environment.WebRootPath, "Images");
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            string filePath = Path.Combine(dir, file.FileName);
+            using(var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+            album.AlbumUrl = "/Images/" + file.FileName;
+            //if (ModelState.IsValid)
+            //{
+            try
             {
                 _context.Add(album);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId", album.ArtistId);
-            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "GenreId", album.GenreId);
-            return View(album);
+            catch
+            {
+                ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name", album.ArtistId);
+                ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name", album.GenreId);
+                return View(album);
+            }
+            
+            //}
+            
         }
 
         // GET: Albums/Edit/5
@@ -84,8 +107,8 @@ namespace PRN211.E4_Group6_A3.Controllers
             {
                 return NotFound();
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId", album.ArtistId);
-            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "GenreId", album.GenreId);
+            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name", album.ArtistId);
+            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name", album.GenreId);
             return View(album);
         }
 
@@ -94,16 +117,25 @@ namespace PRN211.E4_Group6_A3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AlbumId,GenreId,ArtistId,Title,Price,AlbumUrl")] Album album)
+        public async Task<IActionResult> Edit(int id, [Bind("AlbumId,GenreId,ArtistId,Title,Price,AlbumUrl")] Album album, IFormFile file)
         {
+            
             if (id != album.AlbumId)
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            string dir = Path.Combine(_environment.WebRootPath, "Images");
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            string filePath = Path.Combine(dir, file.FileName);
+            using (var fileStream = new FileStream(filePath, FileMode.Append))
             {
-                try
+                await file.CopyToAsync(fileStream);
+            }
+            album.AlbumUrl = "/Images/" + file.FileName;
+
+            //if (ModelState.IsValid)
+            //{
+            try
                 {
                     _context.Update(album);
                     await _context.SaveChangesAsync();
@@ -120,9 +152,9 @@ namespace PRN211.E4_Group6_A3.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId", album.ArtistId);
-            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "GenreId", album.GenreId);
+            //}
+            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name", album.ArtistId);
+            ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name", album.GenreId);
             return View(album);
         }
 
@@ -160,7 +192,7 @@ namespace PRN211.E4_Group6_A3.Controllers
             {
                 _context.Albums.Remove(album);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

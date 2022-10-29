@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GM9ZLIn6VNbKTD5vEvSSyMne6ZJ/ZlCq7AKB0USpKxc=",
+  "Hash": "Wi53waLN87PEQrVunqEbBCeuJltW5YtlJO8ysG0dUZM=",
   "Source": "PRN211.E4_Group6_A3",
   "BasePath": "_content/PRN211.E4_Group6_A3",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\wwwroot\\Images\\download.png",
+      "SourceId": "PRN211.E4_Group6_A3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\wwwroot\\",
+      "BasePath": "_content/PRN211.E4_Group6_A3",
+      "RelativePath": "Images/download.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\download.png"
+    },
+    {
+      "Identity": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\wwwroot\\Images\\placeholder.gif",
+      "SourceId": "PRN211.E4_Group6_A3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\wwwroot\\",
+      "BasePath": "_content/PRN211.E4_Group6_A3",
+      "RelativePath": "Images/placeholder.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\placeholder.gif"
     },
     {
       "Identity": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\wwwroot\\js\\site.js",
