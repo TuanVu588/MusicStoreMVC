@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -17,6 +20,12 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                @{
+                    string UserName = HttpContextAccessor.HttpContext.Session.GetString("UserName") ?? "";
+                    int Role = HttpContextAccessor.HttpContext.Session.GetInt32("Role") ?? 0;
+                    ShoppingCart cart = ShoppingCart.GetCart(HttpContextAccessor.HttpContext);
+                    int count = cart.GetCount();
+                }
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -26,11 +35,24 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Shopping</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Shopping" asp-action="Index">Shopping</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Cart (0)</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Shopping" asp-action="Cart">Cart (@count)</a>
                         </li>
+                        @if(UserName == ""){
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                            </li>
+                        }else{
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Logout">Logout (@UserName)</a>
+                            </li>
+                        }@if(Role == 1){
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Albums" asp-action="Index">Albums</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

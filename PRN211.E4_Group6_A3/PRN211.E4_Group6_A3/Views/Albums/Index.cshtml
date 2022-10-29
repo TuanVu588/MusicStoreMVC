@@ -5,7 +5,12 @@
 }
 
 <h1>Index</h1>
-
+<form asp-action="Index" method="get">
+    Select genre:
+    <select name="genreId" asp-items="ViewBag.GenreIds"></select>
+    <input type="text" name="currentTitle" value="@ViewBag.CurrentTitle"/>
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -43,10 +48,10 @@
                 @Html.DisplayFor(modelItem => item.AlbumUrl)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Artist.ArtistId)
+                @Html.DisplayFor(modelItem => item.Artist.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Genre.GenreId)
+                @Html.DisplayFor(modelItem => item.Genre.Name)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.AlbumId">Edit</a> |
