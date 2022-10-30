@@ -10183,19 +10183,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\": {}
+    "C:\\Users\\ngolu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
+      "projectUniqueName": "E:\\Code_Group\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
       "projectName": "PRN211.E4_Group6_A3",
-      "projectPath": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
-      "packagesPath": "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\obj\\",
+      "projectPath": "E:\\Code_Group\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
+      "packagesPath": "C:\\Users\\ngolu\\.nuget\\packages\\",
+      "outputPath": "E:\\Code_Group\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Vi Tuan Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ngolu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10265,7 +10265,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
