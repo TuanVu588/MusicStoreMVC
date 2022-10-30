@@ -262,3 +262,7 @@ C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\
 C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\obj\Debug\net6.0\PRN211.E4_Group6_A3.pdb
 C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\obj\Debug\net6.0\PRN211.E4_Group6_A3.genruntimeconfig.cache
 C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\obj\Debug\net6.0\ref\PRN211.E4_Group6_A3.dll
+C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\obj\Debug\net6.0\PRN211.E4_Group6_A3.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\bin\Debug\net6.0\JetBrains.Annotations.dll
+C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\bin\Debug\net6.0\X.PagedList.dll
+C:\Users\Vi Tuan Vu\OneDrive\Documents\GitHub\MusicStoreMVC\PRN211.E4_Group6_A3\PRN211.E4_Group6_A3\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll

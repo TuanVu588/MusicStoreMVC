@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PRN211.E4_Group6_A3.Models;
@@ -117,7 +113,7 @@ namespace PRN211.E4_Group6_A3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AlbumId,GenreId,ArtistId,Title,Price,AlbumUrl")] Album album, IFormFile file)
+        public async Task<IActionResult> Edit(int id, [Bind("AlbumId,GenreId,ArtistId,Title,Price,AlbumUrl")] Album album,IFormFile file)
         {
             
             if (id != album.AlbumId)
@@ -136,7 +132,7 @@ namespace PRN211.E4_Group6_A3.Controllers
             //if (ModelState.IsValid)
             //{
             try
-                {
+            {
                     _context.Update(album);
                     await _context.SaveChangesAsync();
                 }
