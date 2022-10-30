@@ -1,0 +1,79 @@
+﻿@model IEnumerable<PRN211.E4_Group6_A3.Models.Album>
+
+@{
+    ViewData["Title"] = "Index";
+    int totalPage = Convert.ToInt32(ViewData["TotalPage"]);
+    int currentPage = Convert.ToInt32(ViewData["CurrentPage"]);
+    int genreId = -1;
+    string genreIdRaw = ViewData["GenreId"].ToString();
+    if (!string.IsNullOrEmpty(genreIdRaw))
+    {
+        genreId = Convert.ToInt32(ViewData["GenreId"]);
+    }
+    string currentTitle = ViewData["CurrentTitle"].ToString();
+
+    string link = "shoppingindex";
+    string linkNext = "";
+    string linkPrevious = "";
+}
+
+<h1>Index</h1>
+<form asp-action="Index" method="get">
+    Select genre:
+    <select name="genreId">
+        @foreach (var item in (List<SelectListItem>)ViewBag.GenreIds)
+        {
+            <!option value="@item.Value" @(Convert.ToInt32(item.Value) == genreId ? "selected":"")>@item.Text</!option>
+        }
+    </select>
+    <input type="text" name="currentTitle" value="@currentTitle" />
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <img src="@Html.DisplayFor(modelItem => item.AlbumUrl)" />
+            <h5>@Html.DisplayFor(model => item.Price)</h5>
+            <h5>@Html.DisplayFor(model => item.Title)</h5>
+            <h5>Artist: @Html.DisplayFor(model => item.Artist.Name)</h5>
+            <h5>Genre: @Html.DisplayFor(model => item.Artist.Name)</h5>
+        </div>
+    }
+</div>
+
+<div class="paging">
+    @if (totalPage > 1)
+    {
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item @(currentPage == 0 ? "disabled" : "")">
+                    @if(genreId != -1){
+                        linkNext = $"{link}?genreId={genreId}&currentTitle={currentTitle}&page={currentPage - 1}";
+                    }
+                    else
+                    {
+                        linkNext = $"{link}?page={currentPage - 1}";
+                    }
+                    <a class="page-link" href="@(currentPage == totalPage ? "" : linkNext)" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item @(currentPage == totalPage - 1 ? "disabled" : "")">
+                    @if(genreId != -1){
+                        linkPrevious = $"{link}?genreId={genreId}&currentTitle={currentTitle}&page={currentPage + 1}";
+                    }
+                    else
+                    {
+                        linkPrevious = $"{link}?page={currentPage + 1}";
+                    }
+                    <a class="page-link" href="@(currentPage == totalPage - 1 ? "" : linkPrevious)">Next</a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
+
+
+
+

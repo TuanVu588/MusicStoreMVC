@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj": {}
+    "D:\\My_ass3\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj": {
+    "D:\\My_ass3\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
+        "projectUniqueName": "D:\\My_ass3\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
         "projectName": "PRN211.E4_Group6_A3",
-        "projectPath": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
-        "packagesPath": "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\obj\\",
+        "projectPath": "D:\\My_ass3\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
+        "packagesPath": "C:\\Users\\vuhai\\.nuget\\packages\\",
+        "outputPath": "D:\\My_ass3\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Vi Tuan Vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vuhai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,8 +71,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -84,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
