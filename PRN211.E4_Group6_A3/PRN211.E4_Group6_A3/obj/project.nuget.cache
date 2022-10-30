@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "B+/jZ2pQ6bYEUlEipYHSCaVYuUajqjUGko0CvztVIxz/sQVG/fMekyGJ1ue9g6jUttjzyqsC7lr7vBlehgQ2IQ==",
+  "dgSpecHash": "OReMQKGLi9+uyrFNvc5Nt0FcXxlBgf/otLzcQuq6fmWbzpq/WJ3BqDnEpgT0lyjQdJaLvbL4p8E4sOSpq4istw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vi Tuan Vu\\OneDrive\\Documents\\GitHub\\MusicStoreMVC\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3\\PRN211.E4_Group6_A3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\jetbrains.annotations\\2022.1.0\\jetbrains.annotations.2022.1.0.nupkg.sha512",
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -180,7 +181,9 @@
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\x.pagedlist\\8.4.3\\x.pagedlist.8.4.3.nupkg.sha512",
+    "C:\\Users\\Vi Tuan Vu\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.3\\x.pagedlist.mvc.core.8.4.3.nupkg.sha512"
   ],
   "logs": []
 }
